@@ -4,16 +4,16 @@ import pathlib
 import re
 
 root = pathlib.Path(__file__).parent
-init = root / "OpenCellEPC" / "__init__.py"
+init = root / "steer-epc" / "__init__.py"
 version = re.search(r'__version__\s*=\s*"([^"]+)"', init.read_text()).group(1)
 
 setup(
-    name='OpenCellProductionCost',
+    name='steer-epc',
     version=version, 
     description='Modelling Production Cost of Stationary Storage Sites',
     author='Nicholas Siemons',
     author_email='nsiemons@stanford.edu',
-    url="https://github.com/nicholas9182/OpenCellEPC/",
+    url="https://github.com/nicholas9182/steer-epc/",
     packages=find_packages(),
     install_requires=[
         "pandas",
