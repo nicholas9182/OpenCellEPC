@@ -13,18 +13,16 @@ setup(
     description='Modelling Production Cost of Stationary Storage Sites',
     author='Nicholas Siemons',
     author_email='nsiemons@stanford.edu',
-    url="https://github.com/nicholas9182/steer-epc/",
+    url="https://github.com/stanford-developers/steer-epc",
     packages=find_packages(),
     install_requires=[
-        "pandas",
-        "numpy",
-        "datetime",
-        "shapely",
-        "plotly",
-        "dash",
-        "dash_bootstrap_components",
-        "flask_caching",
-        "nbformat"
+        "pandas==2.1.4",
+        "numpy==1.26.4",
+        "datetime==5.5",
+        "scipy==1.15.3",
+        "plotly==6.2.0",
+        "dash==3.1.1",
+        "Flask-Caching==2.3.1"
     ],
     scripts=[],
     classifiers=[ 
@@ -32,7 +30,7 @@ setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    python_requires=">=3.10",
+    python_requires="==3.10",
     entry_points={
         'console_scripts': [
             'launch_dash_app=dash_app.app:run',
